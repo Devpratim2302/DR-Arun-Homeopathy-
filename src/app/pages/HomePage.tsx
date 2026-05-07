@@ -5,6 +5,7 @@ import TickerAndMarquee from '../sections/TickerAndMarquee';
 import WhyHomeopathy from '../sections/WhyHomeopathy';
 import Services from '../sections/Services';
 import Specialities from '../sections/Specialities';
+import Banners from '../sections/Banners';
 import Testimonials from '../sections/Testimonials';
 import Blog from '../sections/Blog';
 import Contact from '../sections/Contact';
@@ -19,6 +20,7 @@ export default function HomePage({ scrollTo, openBookingModal }: { scrollTo: (id
       <WhyHomeopathy scrollTo={scrollTo} openBookingModal={openBookingModal} />
       <Services openBookingModal={openBookingModal} />
       <Specialities />
+      <Banners openBookingModal={openBookingModal} />
       <Testimonials />
       <Blog />
       <Contact />
