@@ -63,7 +63,7 @@ function CustomDropdown({
       </div>
 
       {isOpen && (
-        <div className={`absolute z-50 left-0 right-0 mt-2 rounded-xl shadow-2xl border overflow-hidden max-h-60 overflow-y-auto ${
+        <div className={`absolute z-50 left-0 right-0 mt-2 rounded-xl shadow-2xl border overflow-hidden max-h-80 overflow-y-auto pb-2 ${
           dark ? "bg-[#1A1A2E] border-white/10" : "bg-white border-[#1B3A6B]/10"
         }`}>
           {options.map((opt, i) => (

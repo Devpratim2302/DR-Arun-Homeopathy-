@@ -7,7 +7,7 @@ import Services from '../sections/Services';
 import Specialities from '../sections/Specialities';
 import Banners from '../sections/Banners';
 import Testimonials from '../sections/Testimonials';
-import Blog from '../sections/Blog';
+import Gallery from '../sections/Gallery';
 import Contact from '../sections/Contact';
 
 export default function HomePage({ scrollTo, openBookingModal }: { scrollTo: (id: string) => void, openBookingModal: () => void }) {
@@ -22,7 +22,7 @@ export default function HomePage({ scrollTo, openBookingModal }: { scrollTo: (id
       <Specialities />
       <Banners openBookingModal={openBookingModal} />
       <Testimonials />
-      <Blog />
+      <Gallery />
       <Contact />
     </>
   );

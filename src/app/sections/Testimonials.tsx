@@ -1,6 +1,8 @@
 import { motion } from 'motion/react';
 import { Star, Quote } from 'lucide-react';
 
+import bannerImg from '../../assets/testimonials_banner.png';
+
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
   whileInView: { opacity: 1, y: 0 },
@@ -28,8 +30,53 @@ const reviews = [
 export default function Testimonials() {
   return (
     <>
-      {/* Testimonials */}
-      <section id="testimonials" className="py-20 bg-[#F0F4FA]">
+      {/* Testimonials Banner */}
+      <section id="testimonials" className="pt-20 pb-10 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="relative h-[300px] md:h-[450px] rounded-[40px] overflow-hidden shadow-2xl group"
+          >
+            <img 
+              src={bannerImg} 
+              alt="Happy Patients" 
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#1B3A6B]/90 via-[#1B3A6B]/50 to-transparent flex items-center">
+              <div className="pl-8 md:pl-20 max-w-2xl">
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-6">
+                  <Star className="w-3 h-3 text-amber-400 fill-amber-400" />
+                  <span className="text-white text-[10px] font-bold tracking-widest uppercase">Verified Patient Stories</span>
+                </div>
+                <h2 className="text-3xl md:text-6xl font-bold text-white mb-6 leading-[1.1]" style={{ fontFamily: 'Lora' }}>
+                  Stories of <span className="text-[#EF5350]">Healing</span> & <br />New Beginnings
+                </h2>
+                <p className="text-white/80 text-sm md:text-lg mb-8 leading-relaxed max-w-lg">
+                  Join over 10,000+ families who have found natural relief and lasting wellness through our specialized homeopathic care.
+                </p>
+                <div className="flex items-center gap-4">
+                  <div className="flex -space-x-3">
+                    {[1,2,3,4].map(i => (
+                      <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-[#F0F4FA] overflow-hidden shadow-lg">
+                        <img src={`https://i.pravatar.cc/150?u=a${i}`} alt="user" className="w-full h-full object-cover" />
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-white font-bold text-sm">Trusted by 10k+ Families</span>
+                    <span className="text-white/60 text-[10px] uppercase tracking-tighter">Community choice in Vizag</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Testimonials Grid */}
+      <section className="py-20 bg-[#F0F4FA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeInUp} className="text-center mb-14">
             <div className="inline-flex items-center bg-[#1B3A6B]/10 rounded-full px-4 py-1.5 mb-4">

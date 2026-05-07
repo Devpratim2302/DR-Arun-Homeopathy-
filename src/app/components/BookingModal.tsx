@@ -29,7 +29,7 @@ export default function BookingModal({ isOpen, onClose, mode = 'booking' }: Book
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="relative w-full max-w-lg bg-white rounded-[32px] overflow-hidden shadow-2xl"
+            className="relative w-full max-w-lg bg-white rounded-[32px] shadow-2xl"
           >
             <div className="absolute top-4 right-4 z-10">
               <button 
